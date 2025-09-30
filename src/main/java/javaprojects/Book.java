@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package javaprojects;
+
 import java.io.*;
+
 public class Book implements Serializable {
+
     String bookname, subject;
     int price;
 
@@ -15,7 +18,7 @@ public class Book implements Serializable {
     }
 
     public String toString() {
-        return String.format("Book Name=%s, Subject=%s, Price=%s", bookname, subject, price);
+        return String.format("Book Name=%s, Subject=%s, Price=₹%s", bookname, subject, price);
     }
 
     public static void main(String[] args) {
@@ -25,7 +28,8 @@ public class Book implements Serializable {
                 new Book("The Recursion Sutras", "Recursion", 598)
             };
 
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("books.txt"));
+//            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("books.txt"));
+            ObjectOutputStream out = new ObjectOutputStream(System.out);
             out.writeObject(books);
             out.flush();
             out.close();
@@ -34,5 +38,3 @@ public class Book implements Serializable {
         }
     }
 }
-
-
