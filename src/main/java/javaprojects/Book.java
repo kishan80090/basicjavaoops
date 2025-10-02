@@ -7,12 +7,12 @@ import java.io.*;
 public class Book implements Serializable {
     String bookname, subject;
     int price;
-
     public Book(String b, String s, int p) {
         bookname = b;
         subject = s;
         price = p;
     }
+    @Override
     public String toString() {
         return String.format("Book Name=%s, Subject=%s, Price=₹%s", bookname, subject, price);
     }
