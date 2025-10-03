@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Banks {
     private static void menu(){
-        System.out.println("\n0:Exit1, 1:New Account,2:Deposit,3:Withdraw,4:View,5:View All");
+        System.out.println("\n0:Exit1, 1:New Account, 2:Deposit, 3:Withdraw, 4:View, 5:View All");
     }
     
     public static void main(String[] args)throws ClassNotFoundException, InvalidAgeException, InvalidMobileNumberException, NegativeNumberException, NumberFormatException, InsufficientAmountException{
@@ -29,8 +29,7 @@ public class Banks {
                     }catch(IOException ex){
                         System.out.println(ex);
                     }
-                }
-                    
+                }  
                 case 1 -> {
                     try{
                         BankAccounts account = new BankAccounts();
@@ -43,8 +42,7 @@ public class Banks {
                     }catch(NumberFormatException | InvalidAgeException | InvalidMobileNumberException | NegativeNumberException ex){
                         System.out.println(ex);
                     }
-                }
-                    
+                }  
                 case 2 -> {
                     try{
                         System.out.print("Enter the account number : ");
@@ -77,8 +75,6 @@ public class Banks {
                         System.out.println(ex);
                     }
                 }
-
-                    
                 case 5 -> {
                     System.out.println("\nAll Accounts:\n");
                     for(BankAccounts acc : accounts.values())
