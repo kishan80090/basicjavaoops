@@ -21,7 +21,7 @@ public class BankAccount implements Serializable {
     private String accountno;
 
     public BankAccount() throws
-            InvalidAgeException, InvalidMobileNumberException, NegativeNumberException {
+        InvalidAgeException, InvalidMobileNumberException, NegativeNumberException {
         Scanner s = new Scanner(System.in);
         this.customer = new Person();
         int balance;

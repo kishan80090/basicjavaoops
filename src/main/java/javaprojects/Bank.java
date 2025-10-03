@@ -10,11 +10,7 @@ public class Bank {
             account = new BankAccount();
             System.out.println(account);
             System.out.println("Success");
-        } catch (InvalidAgeException ex) {
-            System.out.println(ex);
-        } catch (InvalidMobileNumberException ex) {
-            System.out.println(ex);
-        } catch (NegativeNumberException ex) {
+        } catch (InvalidAgeException | InvalidMobileNumberException | NegativeNumberException ex) {
             System.out.println(ex);
         } finally {
             System.out.println("Thanks You");

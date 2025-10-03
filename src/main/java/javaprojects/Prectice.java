@@ -4,6 +4,9 @@
  */
 package javaprojects;
 
-public class Generics1 {
+public class Prectice {
     
+    public static void main(String[] args) {
+        System.out.println(" ");
+    }
 }

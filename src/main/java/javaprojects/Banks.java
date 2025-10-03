@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Banks {
 
     private static void menu() {
-        System.out.println("\n0:Exit1, 1:New Account, 2:Deposit, 3:Withdraw, 4:View, 5:View All");
+    System.out.println("\n0:Exit1, 1:New Account, 2:Deposit, 3:Withdraw, 4:View, 5:View All");
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, InvalidAgeException, InvalidMobileNumberException, NegativeNumberException, NumberFormatException, InsufficientAmountException {
+    public static void main(String[] args) throws ClassNotFoundException, InvalidAgeException, InvalidMobileNumberException, NegativeNumberException, NumberFormatException, InsufficientAmountException, AccountNotFoundException {
         Scanner s;
         s = new Scanner(System.in);
         Utilities.readAccounts();
@@ -49,7 +49,7 @@ public class Banks {
                         String accountnumber = s.nextLine();
                         BankAccounts accountsObj = Utilities.getBankAccount(accountnumber);
                         accountsObj.deposit();
-                        System.out.println("Updated account: " + accountsObj);
+                        System.out.println("Updated account successfull " + accountsObj);
                     } catch (NumberFormatException | AccountNotFoundException | NegativeNumberException ex) {
                         System.out.println(ex);
                     }
@@ -60,7 +60,7 @@ public class Banks {
                         String accountnumber = s.nextLine();
                         BankAccounts account = Utilities.getBankAccount(accountnumber);
                         account.withdraw();
-                        System.out.println("Updated account: " + account);
+                        System.out.println("Updated account successfull" + account);
                     } catch (NumberFormatException | AccountNotFoundException | InsufficientAmountException | NegativeNumberException ex) {
                         System.out.println(ex);
                     }

@@ -4,15 +4,12 @@
  */
 package javaprojects;
 
-/**
- *
- * @author HP
- */
-public class InvalidAgeException extends Exception{
-    public InvalidAgeException(){
-        
+public class InvalidAgeException extends Exception {
+
+    public InvalidAgeException() {
     }
-    public InvalidAgeException(String message){
+    
+    public InvalidAgeException(String message) {
         super(message);
     }
 }

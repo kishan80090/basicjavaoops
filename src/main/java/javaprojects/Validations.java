@@ -32,7 +32,7 @@ public class Validations {
             throw new NegativeNumberException("Negative numbers not allowed");
         }
     }
-
+    
     public static void isInvalidAge(int n) throws InvalidAgeException {
         if (n < 18) {
             throw new InvalidAgeException("Age is Invalid");
